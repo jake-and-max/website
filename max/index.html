@@ -2,9 +2,23 @@
 <canvas width="640px" height="320px" id="max_canvas"></canvas>
 
 <script>
-  var canvas = document.getElementById("max_canvas");
-  var ctx = canvas.getContext('2d');
+var canvas, ctx, x;
+
+function main(){
+  canvas = document.getElementById("max_canvas");
+  ctx = canvas.getContext('2d');
+  
+  x = 0;
+  setInterval(update, 300);
+}
+
+function update(){
+  x += 2;
   
   ctx.fillStyle = "#ff0000";
-  ctx.fillRect(0, 0, 10, 10);
+  ctx.fillRect(x, 0, 10, 10);
+}
+  
+main();
+  
 </script>
