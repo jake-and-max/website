@@ -2,20 +2,21 @@
 <canvas width="640px" height="320px" id="max_canvas"></canvas>
 
 <script>
-var canvas, ctx, x;
+var canvas, ctx, x, y;
 
 function main(){
   document.addEventListener('keydown', keydown);
   canvas = document.getElementById("max_canvas");
   ctx = canvas.getContext('2d');
   x = 0;
+  y = 0;
   setInterval(update, 300);
 }
 
 function update(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = "#ff0000";
-  ctx.fillRect(x, 0, 10, 10);
+  ctx.fillRect(x, y, 10, 10);
 }
 
 function keydown(event) {
