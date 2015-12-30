@@ -2,5 +2,9 @@
 <canvas width="640px" height="320px" id="max_canvas"></canvas>
 
 <script>
-  var canvas = document.getElementByid("max_canvas");
+  var canvas = document.getElementById("max_canvas");
+  var ctx = canvas.getContext('2d');
+  
+  ctx.fillStyle = "#ff0000";
+  ctx.fillRect(0, 0, 10, 10);
 </script>
